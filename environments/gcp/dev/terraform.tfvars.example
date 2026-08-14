@@ -1,0 +1,15 @@
+project_id = "tp-vde-gcp-devops-504507"
+region     = "europe-west1"
+zone       = "europe-west1-b"
+env        = "dev"
+
+# Compte de service : terraform-sa@tp-vde-gcp-devops-504507.iam.gserviceaccount.com
+# -> Placez le fichier de clé JSON téléchargé dans ce dossier sous le nom
+#    "terraform-sa-key.json" (voir main.tf, bloc provider "google")
+
+# --- Clé SSH ---
+ ssh_public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEnV6lRsJCg/cf1XZarkA5/gnhQn59QrwoNGLdgDHCZG deployer"
+
+# --- Mot de passe utilisateur ---
+# Choisissez vous-même le mot de passe du compte "deployer" créé sur la VM
+ admin_password = "Said4321"
