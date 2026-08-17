@@ -13,10 +13,7 @@ if ! command -v cloud-init &> /dev/null; then
 datasource_list: [ GCE ]
 EOC
 
-  # Le paquet cloud-init active deja ses propres services systemd
-  # automatiquement lors de l'installation (postinst) : pas besoin de le
-  # refaire ici (et le nom exact du service varie selon la version :
-  # cloud-init-main.service, pas cloud-init.service).
+  systemctl enable cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service
 
   # Execute le pipeline complet immediatement (pas besoin de reboot)
   cloud-init init --local
