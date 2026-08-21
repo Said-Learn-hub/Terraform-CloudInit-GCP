@@ -12,7 +12,18 @@ variable "keyboard_variant" { default = "azerty" }
 
 variable "admin_user"     { default = "deployer" }
 variable "admin_password" {
-  default   = "Said4321"
+  default   = ""
   sensitive = true
 }
 variable "ssh_public_key" { default = "" }
+variable "ssh_private_key" { default = "" }
+
+#ansible user
+
+variable "ansible_user"     { default = "ansible" }
+variable "ansible_password" {
+  default   = ""
+  sensitive = true
+}
+variable "github_ssh_public_key" { default = "" }
+variable "github_ssh_private_key" { default = "" }

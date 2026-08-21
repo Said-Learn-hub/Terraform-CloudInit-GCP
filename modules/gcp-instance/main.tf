@@ -28,7 +28,15 @@ resource "google_compute_instance" "vm" {
       keyboard_variant = var.keyboard_variant
       admin_user       = var.admin_user
       admin_password   = var.admin_password
+      
       ssh_public_key   = var.ssh_public_key
+      ssh_private_key   = var.ssh_private_key
+      
+      ansible_user       = var.ansible_user
+      ansible_password   = var.ansible_password
+
+      github_ssh_public_key   = var.github_ssh_public_key
+      github_ssh_private_key   = var.github_ssh_private_key
     })
   }
 }
